@@ -641,6 +641,9 @@ helps['aks create'] = f"""
         - name: --app-routing-default-nginx-controller --ardnc
           type: string
           short-summary: Configure default nginx ingress controller type. Valid values are annotationControlled (default behavior), external, internal, or none.
+        - name: --enable-default-domain
+          type: bool
+          short-summary: Enable default domain for Application Routing addon.
         - name: --enable-ai-toolchain-operator
           type: bool
           short-summary: Enable AI toolchain operator to the cluster.
@@ -3635,6 +3638,9 @@ helps['aks approuting enable'] = """
         type: string
         short-summary: Configure default NginxIngressController resource
         long-summary: Configure default nginx ingress controller type. Valid values are annotationControlled (default behavior), external, internal, or none.
+      - name: --enable-default-domain
+        type: bool
+        short-summary: Enable default domain for Application Routing addon.
 """
 
 helps['aks approuting disable'] = """
@@ -3660,6 +3666,12 @@ helps['aks approuting update'] = """
         type: string
         short-summary: Configure default NginxIngressController resource
         long-summary: Configure default nginx ingress controller type. Valid values are annotationControlled (default behavior), external, internal, or none.
+      - name: --enable-default-domain
+        type: bool
+        short-summary: Enable default domain for Application Routing addon.
+      - name: --disable-default-domain
+        type: bool
+        short-summary: Disable default domain for Application Routing addon.
 """
 
 helps['aks approuting zone'] = """
