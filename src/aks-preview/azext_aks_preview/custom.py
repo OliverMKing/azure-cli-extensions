@@ -4161,6 +4161,10 @@ def aks_approuting_update(
         enable_default_domain=False,
         disable_default_domain=False
 ):
+
+    if enable_default_domain and disable_default_domain:
+        raise CLIError("Conflicting flags. Cannot --enable-default-domain and --disable-default-domain at the same time.")
+
     return _aks_approuting_update(
         cmd,
         client,
